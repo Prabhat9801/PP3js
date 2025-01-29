@@ -1,182 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programmers' Paradise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrafters - Programming Club</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
-    }
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #2c3e50;
-      color: white;
-    }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    header .logo {
-      font-size: 1.5em;
-      font-weight: bold;
-    }
+h1, h2, h3 {
+    color: #2c3e50;
+}
 
-    header nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
+a {
+    text-decoration: none;
+    color: #3498db;
+}
 
-    header nav ul li {
-      margin: 0 15px;
-    }
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-    header nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1em;
-      transition: color 0.3s;
-    }
+.btn:hover {
+    background-color: #2980b9;
+}
 
-    header nav ul li a:hover {
-      color: #18bc9c;
-    }
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+}
 
-    #welcome {
-      position: relative;
-      text-align: center;
-      color: white;
-    }
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
 
-    #background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
 
-    .welcome {
-      padding: 100px 20px;
-    }
+header nav ul li {
+    margin-left: 20px;
+}
 
-    section {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+}
 
-    h2 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
 
-    .event, .member, .gallery-item {
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 8px;
-      background-color: white;
-      margin: 15px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #2c3e50;
-      color: white;
-      margin-top: 20px;
-    }
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Events Section */
+.events {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.events h2 {
+    margin-bottom: 40px;
+}
+
+.event-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.event {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.event h3 {
+    margin-bottom: 15px;
+}
+
+.event p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.projects h2 {
+    margin-bottom: 40px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input, .contact form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact form button {
+    width: 50%;
+}
+
+/* Footer */
+footer {
+    background-color: #34495e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+footer .social-links a:hover {
+    color: #3498db;
+  }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Programmers' Paradise</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#team">Our Team</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <h1>CodeCrafters</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div id="welcome">
-    <canvas id="background"></canvas>
-    <div class="welcome">
-      <h1>Welcome to Programmers' Paradise</h1>
-      <p>Your gateway to the exciting world of coding and technology at CSVTU!</p>
-    </div>
-  </div>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to CodeCrafters</h2>
+            <p>Where innovation meets code. Join us to explore the world of programming, collaborate on projects, and participate in exciting events.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Programmers' Paradise is more than just a coding club; it's a community dedicated to empowering students from all branches to elevate their coding skills and knowledge to new heights.</p>
-  </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>CodeCrafters is the official programming club of [Your College Name]. We are a community of passionate coders who aim to enhance our skills, work on real-world projects, and organize coding competitions and workshops.</p>
+        </div>
+    </section>
 
-  <section id="events">
-    <h2>Events</h2>
-    <div class="event">
-      <h3>Competitive Programming</h3>
-      <p>Participants will tackle interesting and challenging questions. Leaderboard will be provided. Only members can participate.</p>
-    </div>
-    <div class="event">
-      <h3>Introduction to CV</h3>
-      <p>Introduction to the field of Computer Vision and its importance in the field of Artificial Intelligence. Open for all.</p>
-    </div>
-  </section>
+    <section id="events" class="events">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="event-list">
+                <div class="event">
+                    <h3>Hackathon 2023</h3>
+                    <p>Join us for our annual hackathon! Collaborate, innovate, and build something amazing.</p>
+                    <a href="#" class="btn">Register Now</a>
+                </div>
+                <div class="event">
+                    <h3>Workshop: Web Development</h3>
+                    <p>Learn the basics of web development with HTML, CSS, and JavaScript.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>Copyright &copy; Programmers' Paradise</p>
-  </footer>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Our Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>College Event Manager</h3>
+                    <p>A web application to manage and organize college events efficiently.</p>
+                </div>
+                <div class="project">
+                    <h3>AI Chatbot</h3>
+                    <p>An intelligent chatbot designed to assist students with college-related queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script>
-    const canvas = document.getElementById("background");
-    const renderer = new THREE.WebGLRenderer({ canvas });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to join us? Reach out!</p>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CodeCrafters. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
 
-    const geometry = new THREE.TorusGeometry(1, 0.4, 16, 100);
-    const material = new THREE.MeshStandardMaterial({ color: 0x0077ff });
-    const torus = new THREE.Mesh(geometry, material);
-    scene.add(torus);
-
-    const light = new THREE.PointLight(0xffffff);
-    light.position.set(5, 5, 5);
-    scene.add(light);
-
-    const ambientLight = new THREE.AmbientLight(0xffffff);
-    scene.add(ambientLight);
-
-    function animate() {
-      requestAnimationFrame(animate);
-      torus.rotation.x += 0.01;
-      torus.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    }
-
-    animate();
-
-    window.addEventListener("resize", () => {
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
+    <script>
+      // Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-  </script>
+});
+    </script>
 </body>
-</html>
+  </html>
